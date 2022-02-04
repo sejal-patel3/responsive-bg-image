@@ -1,0 +1,70 @@
+body {
+    font-size: 62.5%;
+    font-family: arial;
+    letter-spacing: 0.1rem;
+    max-width: 1536px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    height: 400px;
+    padding: 2rem;
+    background-color: #eff2f7;
+    background: url(../img/plants-bg-600.webp) center bottom / cover no-repeat;
+    /*background-size - background-position - /  background-size - background-repeat*/
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+}
+
+section.flex-container {
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 80vw;
+    height: 300px; /*temp*/
+    background-color: darkgreen;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+header,
+.card {
+    margin-bottom: 30px; /*temp*/
+}
+
+@media only screen and (min-width: 850px) {
+    header {
+        background: url(../img/plants-bg-1200.webp) center bottom / cover no-repeat;
+    }
+
+    h1 {
+        /*automatically increase font size with larger viewports */
+        font-size: calc(2.5rem + 2vw);
+    }
+
+    section.flex-container {
+        justify-content: space-between;
+    }
+
+    .card {
+        width: calc(76.875vw/3);
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    header {
+        height: 500px;
+    }
+}
